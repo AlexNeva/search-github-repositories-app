@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Search GitHub repositories</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <main class="main">
+      <section class='github-result'>
+        <div class='github-result__container container'>
+          <h1 class='github-result__title'>Search GitHub repositories</h1>
+          <div class="github-result__body">
+            <div class="github-result__search search">
+
+              <div class="search__field" tabindex="0">
+                <input id="search-input" type="text" placeholder="Введите имя репозитория" autocomplete="off">
+                <button type="submit" class="search__btn" aria-label="найти">
+                  <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
+                    style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                    <path
+                      d="M447.615,64.386C406.095,22.866,350.892,0,292.175,0s-113.92,22.866-155.439,64.386
+                             C95.217,105.905,72.35,161.108,72.35,219.824c0,53.683,19.124,104.421,54.132,144.458L4.399,486.366
+                             c-5.864,5.864-5.864,15.371,0,21.236C7.331,510.533,11.174,512,15.016,512s7.686-1.466,10.617-4.399l122.084-122.083
+                             c40.037,35.007,90.775,54.132,144.458,54.132c58.718,0,113.919-22.866,155.439-64.386c41.519-41.519,64.385-96.722,64.385-155.439
+                             S489.134,105.905,447.615,64.386z M426.379,354.029c-74.001,74-194.406,74-268.407,0c-74-74-74-194.407,0-268.407
+                             c37.004-37.004,85.596-55.5,134.204-55.5c48.596,0,97.208,18.505,134.204,55.5C500.378,159.621,500.378,280.028,426.379,354.029z" />
+                  </svg>
+                </button>
+              </div>
+
+              <div class="search__found found">
+
+              </div>
+            </div>
+            </form>
+
+            <div class="github-result__output output">
+              <!-- <div class="output__item item-output">
+                <div class="item-output__name">
+                  Name: react
+                </div>
+                <div class="item-output__owner">
+                  Owner: facebook
+                </div>
+                <div class="item-output__stars">
+                  Stars: 145231
+                </div>
+                <button class="item-output__delete" aria-label="удалить данное поле">
+                  <svg width="33" height="37" viewBox="0 0 33 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g class="trash-head">
+                      <path
+                        d="M12.1624 5.81091H17.1763V6.65457H18.9869V5.69281C18.9872 4.75943 18.2282 4 17.2953 4H12.0434C11.1104 4 10.3515 4.75943 10.3515 5.69281V6.65457H12.1624V5.81091Z" />
+                      <path
+                        d="M26.2997 11.0349L25.7051 9.25238C25.5483 8.78249 25.1084 8.46548 24.6129 8.46548H4.72554C4.23024 8.46548 3.7901 8.78249 3.63354 9.25238L3.03891 11.0349C2.92424 11.3787 3.07347 11.7293 3.35202 11.9042C3.46555 11.9754 3.5999 12.0182 3.74753 12.0182H25.5911C25.7387 12.0182 25.8733 11.9754 25.9866 11.904C26.2652 11.7291 26.4144 11.3785 26.2997 11.0349Z" />
+                    </g>
+
+                    <path
+                      d="M23.1686 13.8291H6.17001C5.70424 13.8291 5.33757 14.2264 5.37511 14.6908L6.79623 32.2635C6.87543 33.2445 7.69368 34 8.67673 34H20.6617C21.6447 34 22.463 33.2445 22.5422 32.2632L23.9633 14.6908C24.0011 14.2264 23.6344 13.8291 23.1686 13.8291V13.8291ZM10.286 32.1257C10.267 32.1268 10.248 32.1275 10.2292 32.1275C9.75453 32.1275 9.35605 31.7579 9.32652 31.2777L8.43594 16.8515C8.40527 16.3523 8.78499 15.9227 9.28395 15.892C9.78131 15.8618 10.2128 16.2406 10.2434 16.74L11.1338 31.1662C11.1647 31.6654 10.785 32.0948 10.286 32.1257V32.1257ZM15.5848 31.2221C15.5848 31.7219 15.1795 32.1273 14.6794 32.1273C14.1793 32.1273 13.7739 31.7219 13.7739 31.2221V16.7956C13.7739 16.2955 14.1793 15.8902 14.6794 15.8902C15.1793 15.8902 15.5848 16.2955 15.5848 16.7956V31.2221ZM20.9027 16.849L20.0524 31.2752C20.0242 31.7563 19.6251 32.1273 19.1494 32.1273C19.1316 32.1273 19.1135 32.1268 19.0954 32.1259C18.5962 32.0964 18.2154 31.6679 18.2449 31.1687L19.095 16.7423C19.1243 16.2431 19.5514 15.8623 20.0519 15.8918C20.5511 15.9211 20.932 16.3498 20.9027 16.849V16.849Z" />
+                  </svg>
+                </button>
+              </div>
+              <div class="output__item item-output">
+                <div class="item-output__name">
+                  Name: react
+                </div>
+                <div class="item-output__owner">
+                  Owner: facebook
+                </div>
+                <div class="item-output__stars">
+                  Stars: 145231
+                </div>
+                <button class="item-output__delete" aria-label="удалить данное поле">
+
+                </button>
+              </div>
+              <div class="output__item item-output">
+                <div class="item-output__name">
+                  Name: react
+                </div>
+                <div class="item-output__owner">
+                  Owner: facebook
+                </div>
+                <div class="item-output__stars">
+                  Stars: 145231
+                </div>
+                <button class="item-output__delete" aria-label="удалить данное поле">
+
+                </button>
+              </div> -->
+            </div>
+          </div>
+
+        </div>
+
+  </div>
+  </section>
+  </main>
+  </div>
+</body>
+
+</html>

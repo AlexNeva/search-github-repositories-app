@@ -1,0 +1,47 @@
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  line-height: 1.2;
+  background-color: #fff;
+  @include adaptiv-value( font-size, 18, 14, 1);
+}
+
+.wrapper {
+  position: relative;
+  min-width: $minWidth + px;
+  margin: 0 auto;
+  // overflow: hidden;
+  min-height: 100%;
+}
+.container {
+  max-width: 1360px;
+  padding-left: var(--container-side-padding);
+  padding-right: var(--container-side-padding);
+  margin: 0 auto;
+}
+
+h1 {
+  font-weight: 700;
+}
+
+picture {
+  display: flex;
+  align-items: center;
+}
+
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  border: 0 !important;
+  clip: rect(0 0 0 0) !important;
+}
+
+
+
+
+
